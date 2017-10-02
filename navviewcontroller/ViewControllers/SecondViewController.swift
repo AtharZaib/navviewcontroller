@@ -13,13 +13,13 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         navigationItem.titleView = titleLabel
         titleLabel.text = "Second"
-        titleLabel.textColor = .black
         titleLabel.textAlignment = .center
+        titleLabel.textColor = .black
+
         view.backgroundColor = .red
-    
     }
 
     override func didReceiveMemoryWarning() {

@@ -15,14 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
         let firstViewController = FirstViewController()
-        let navViewController = UINavigationController(rootViewController: firstViewController)
-        window?.rootViewController = navViewController
-                
+        let navController = UINavigationController(rootViewController: firstViewController)
+        
+        window?.rootViewController = navController
+        
         return true
     }
 

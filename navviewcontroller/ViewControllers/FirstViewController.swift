@@ -14,21 +14,19 @@ class FirstViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        navigationItem.title = "First Controller"
+        navigationItem.title = "Our NavItem"
         navigationController?.navigationBar.isTranslucent = false
         
-        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
+        let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height))
         navigationItem.titleView = titleLabel
         titleLabel.text = "First"
-        titleLabel.textColor = .black
         titleLabel.textAlignment = .center
+        titleLabel.textColor = .black
         
         let nextButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(moveToSecond))
         navigationItem.rightBarButtonItem = nextButton
         
-        
         view.backgroundColor = .blue
-        
     }
     
     @objc func moveToSecond() {
